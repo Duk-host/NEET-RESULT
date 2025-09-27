@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Eligibility Cum Entrance Test (UG) - 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+        
+        /* Header Styles - Dark Blue Background */
+        .header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .govt-emblem {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 8px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .dept-info {
+            color: white;
+        }
+        
+        .dept-title {
+            font-size: 12px;
+            line-height: 1.3;
+        }
+        
+        .dept-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 2px 0;
+        }
+        
+        .test-title {
+            text-align: center;
+            flex-grow: 1;
+        }
+        
+        .test-title h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .test-title h2 {
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .right-logos {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .nta-logo {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 10px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .nmc-logo {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 10px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .logo-text {
+            font-size: 10px;
+            color: white;
+            margin-top: 5px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .login-header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .login-form {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        
+        .captcha-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .captcha-box {
+            background: #e3f2fd;
+            border: 1px solid #1e3a8a;
+            padding: 8px 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 16px;
+            color: #1e3a8a;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .refresh-captcha {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .refresh-captcha:hover {
+            background: #45a049;
+        }
+        
+        .captcha-input {
+            flex: 1;
+        }
+        
+        .login-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+        
+        /* Result Page Styles */
+        .result-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .result-header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .result-content {
+            padding: 30px;
+        }
+        
+        .candidate-info {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .candidate-photo {
+            width: 120px;
+            height: 150px;
+            background: #f5f5f5;
+            border: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .candidate-details {
+            flex: 1;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 10px;
+            padding: 5px 0;
+        }
+        
+        .detail-label {
+            width: 150px;
+            color: #666;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .detail-value {
+            flex: 1;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .score-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .score-title {
+            font-size: 18px;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .score-label {
+            color: #666;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .score-value {
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .qualification-status {
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .qualification-status.qualified {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+        
+        .qualification-status.not-qualified {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+        
+        .status-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .status-description {
+            font-size: 14px;
+        }
+        
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            margin: 0 10px;
+        }
+        
+        .print-btn {
+            background: #007bff;
+            color: white;
+        }
+        
+        .print-btn:hover {
+            background: #0056b3;
+        }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .back-btn:hover {
+            background: #545b62;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .candidate-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .score-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="govt-emblem">
+                    <div>Government<br>of<br>India</div>
+                </div>
+                <div class="dept-info">
+                    <div class="dept-title">Department of Higher Education</div>
+                    <div class="dept-name">Ministry of Education</div>
+                    <div class="dept-title">Government of India</div>
+                </div>
+            </div>
+            
+            <div class="test-title">
+                <h1>National Eligibility Cum Entrance Test (UG) - 2025</h1>
+                <h2>Score Card</h2>
+            </div>
+            
+            <div class="right-logos">
+                <div class="logo-container">
+                    <div class="nta-logo">राष्ट्रीय<br>परीक्षा<br>एजेंसी</div>
+                    <div class="logo-text">National Testing Agency</div>
+                </div>
+                <div class="logo-container">
+                    <div class="nmc-logo">राष्ट्रीय<br>आयुर्विज्ञान<br>आयोग</div>
+                    <div class="logo-text">National Medical<br>Commission</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Login Container -->
+    <div class="main-content" id="loginPage">
+        <div class="login-header">
+            🔒 View Result
+        </div>
+        <div class="login-form">
+            <div class="form-group">
+                <label>Application Number:</label>
+                <input type="text" id="appNumber" placeholder="Enter Application Number">
+            </div>
+            
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" id="password" placeholder="Enter Password">
+            </div>
+            
+            <div class="form-group">
+                <label>Enter CAPTCHA(case sensitive):</label>
+                <div class="captcha-group">
+                    <div class="captcha-box" id="captchaText">J8GE2S</div>
+                    <button class="refresh-captcha" onclick="refreshCaptcha()" title="Refresh CAPTCHA">↻</button>
+                    <input type="text" class="captcha-input" id="captchaInput" placeholder="Enter CAPTCHA">
+                </div>
+            </div>
+            
+            <button class="login-btn" onclick="handleLogin()">LOGIN</button>
+        </div>
+    </div>
+    
+    <!-- Result Container -->
+    <div class="result-container" id="resultPage">
+        <div class="result-header">
+            NEET UG 2025 - Result & Score Card
+        </div>
+        <div class="result-content">
+            <div class="candidate-info">
+                <div class="candidate-photo" id="candidatePhoto">
+                    Candidate<br>Photo
+                </div>
+                <div class="candidate-details">
+                    <div class="detail-row">
+                        <div class="detail-label">Application Number:</div>
+                        <div class="detail-value" id="displayAppNumber">-</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Candidate Name:</div>
+                        <div class="detail-value" id="candidateName">-</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Father's Name:</div>
+                        <div class="detail-value" id="fatherName">-</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Mother's Name:</div>
+                        <div class="detail-value" id="motherName">-</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Category:</div>
+                        <div class="detail-value" id="category">-</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Date of Birth:</div>
+                        <div class="detail-value" id="dob">-</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Gender:</div>
+                        <div class="detail-value" id="gender">-</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-title">NEET UG 2025 Score Details</div>
+                <div class="score-grid">
+                    <div class="score-item">
+                        <span class="score-label">Total Marks Obtained:</span>
+                        <span class="score-value" id="totalMarks">-</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">All India Rank (AIR):</span>
+                        <span class="score-value" id="aiRank">-</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Category Rank:</span>
+                        <span class="score-value" id="categoryRank">-</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Percentile Score:</span>
+                        <span class="score-value" id="percentile">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-title">Subject-wise Score Breakdown</div>
+                <div class="score-grid">
+                    <div class="score-item">
+                        <span class="score-label">Physics:</span>
+                        <span class="score-value" id="physicsScore">-</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Chemistry:</span>
+                        <span class="score-value" id="chemistryScore">-</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Biology (Botany):</span>
+                        <span class="score-value" id="botanyScore">-</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-label">Biology (Zoology):</span>
+                        <span class="score-value" id="zoologyScore">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="qualification-status" id="qualificationStatus">
+                <div class="status-text" id="statusText">QUALIFIED</div>
+                <div class="status-description" id="statusDescription">
+                    Congratulations! You have qualified NEET UG 2025
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn print-btn" onclick="window.print()">Print Score Card</button>
+                <button class="btn back-btn" onclick="goBack()">Back to Login</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Sample candidate data
+        const candidateData = {
+            'NEET2321': {
+                password: 'MAYA@2003',
+                name: 'MAYA SHARMA',
+                father: 'RAJESH SHARMA',
+                mother: 'PRIYA SHARMA',
+                category: 'General',
+                dob: '15/06/2005',
+                gender: 'Female',
+                marks: 650,
+                aiRank: 12543,
+                categoryRank: 8921,
+                percentile: 98.5,
+                physics: 168,
+                chemistry: 172,
+                botany: 158,
+                zoology: 152,
+                qualified: true
+            }
+        };
+        
+        function generateCaptcha() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('captchaText').textContent = captcha;
+            return captcha;
+        }
+        
+        function refreshCaptcha() {
+            currentCaptcha = generateCaptcha();
+            document.getElementById('captchaInput').value = '';
+        }
+        
+        let currentCaptcha = generateCaptcha();
+        
+        function handleLogin() {
+            const appNumber = document.getElementById('appNumber').value.trim();
+            const password = document.getElementById('password').value;
+            const captchaInput = document.getElementById('captchaInput').value.trim();
+            
+            if (!appNumber || !password || !captchaInput) {
+                alert('Please fill all required fields');
+                return;
+            }
+            
+            if (captchaInput.toUpperCase() !== currentCaptcha) {
+                alert('Invalid CAPTCHA. Please try again.');
+                refreshCaptcha();
+                return;
+            }
+            
+            // Check credentials
+            const candidate = candidateData[appNumber];
+            
+            if (!candidate || candidate.password !== password) {
+                alert('Invalid Application Number or Password');
+                refreshCaptcha();
+                return;
+            }
+            
+            // Show result page
+            showResult(appNumber, candidate);
+        }
+        
+        function showResult(appNumber, candidate) {
+            // Hide login page
+            document.getElementById('loginPage').style.display = 'none';
+            // Show result page
+            document.getElementById('resultPage').style.display = 'block';
+            
+            // Populate candidate data
+            document.getElementById('displayAppNumber').textContent = appNumber;
+            document.getElementById('candidateName').textContent = candidate.name;
+            document.getElementById('fatherName').textContent = candidate.father;
+            document.getElementById('motherName').textContent = candidate.mother;
+            document.getElementById('category').textContent = candidate.category;
+            document.getElementById('dob').textContent = candidate.dob;
+            document.getElementById('gender').textContent = candidate.gender;
+            
+            // Score details
+            document.getElementById('totalMarks').textContent = candidate.marks + '/720';
+            document.getElementById('aiRank').textContent = candidate.aiRank.toLocaleString();
+            document.getElementById('categoryRank').textContent = candidate.categoryRank.toLocaleString();
+            document.getElementById('percentile').textContent = candidate.percentile + '%';
+            
+            // Subject scores
+            document.getElementById('physicsScore').textContent = candidate.physics + '/180';
+            document.getElementById('chemistryScore').textContent = candidate.chemistry + '/180';
+            document.getElementById('botanyScore').textContent = candidate.botany + '/180';
+            document.getElementById('zoologyScore').textContent = candidate.zoology + '/180';
+            
+            // Set qualification status
+            const statusDiv = document.getElementById('qualificationStatus');
+            const statusText = document.getElementById('statusText');
+            const statusDesc = document.getElementById('statusDescription');
+            
+            if (candidate.qualified) {
+                statusDiv.className = 'qualification-status qualified';
+                statusText.textContent = 'QUALIFIED';
+                statusDesc.textContent = 'Congratulations! You have successfully qualified NEET UG 2025. You are eligible for counseling.';
+            } else {
+                statusDiv.className = 'qualification-status not-qualified';
+                statusText.textContent = 'NOT QUALIFIED';
+                statusDesc.textContent = 'You have not met the minimum qualifying criteria for NEET UG 2025.';
+            }
+        }
+        
+        function goBack() {
+            // Show login page
+            document.getElementById('loginPage').style.display = 'block';
+            // Hide result page
+            document.getElementById('resultPage').style.display = 'none';
+            // Clear form
+            document.getElementById('appNumber').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('captchaInput').value = '';
+            refreshCaptcha();
+        }
+        
+        // Enter key support for login
+        document.getElementById('captchaInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleLogin();
+            }
+        });
+    </script>
+</body>
+</html>
