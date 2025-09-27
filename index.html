@@ -260,28 +260,13 @@
         }
         
         .candidate-info {
-            display: flex;
-            gap: 30px;
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 2px solid #f0f0f0;
         }
         
-        .candidate-photo {
-            width: 120px;
-            height: 150px;
-            background: #f5f5f5;
-            border: 2px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 12px;
-            text-align: center;
-        }
-        
         .candidate-details {
-            flex: 1;
+            width: 100%;
         }
         
         .detail-row {
@@ -494,9 +479,6 @@
         </div>
         <div class="result-content">
             <div class="candidate-info">
-                <div class="candidate-photo" id="candidatePhoto">
-                    Candidate<br>Photo
-                </div>
                 <div class="candidate-details">
                     <div class="detail-row">
                         <div class="detail-label">Application Number:</div>
@@ -509,10 +491,6 @@
                     <div class="detail-row">
                         <div class="detail-label">Father's Name:</div>
                         <div class="detail-value" id="fatherName">-</div>
-                    </div>
-                    <div class="detail-row">
-                        <div class="detail-label">Mother's Name:</div>
-                        <div class="detail-value" id="motherName">-</div>
                     </div>
                     <div class="detail-row">
                         <div class="detail-label">Category:</div>
@@ -592,20 +570,19 @@
         const candidateData = {
             'NEET2321': {
                 password: 'MAYA@2003',
-                name: 'MAYA SHARMA',
-                father: 'RAJESH SHARMA',
-                mother: 'PRIYA SHARMA',
+                name: 'MAYA PRASAD',
+                father: 'PRASAD',
                 category: 'General',
                 dob: '15/06/2005',
                 gender: 'Female',
-                marks: 650,
-                aiRank: 12543,
+                marks: 420,
+                aiRank: 102345,
                 categoryRank: 8921,
-                percentile: 98.5,
-                physics: 168,
-                chemistry: 172,
-                botany: 158,
-                zoology: 152,
+                percentile: 45.2,
+                physics: 105,
+                chemistry: 110,
+                botany: 98,
+                zoology: 107,
                 qualified: true
             }
         };
@@ -666,7 +643,6 @@
             document.getElementById('displayAppNumber').textContent = appNumber;
             document.getElementById('candidateName').textContent = candidate.name;
             document.getElementById('fatherName').textContent = candidate.father;
-            document.getElementById('motherName').textContent = candidate.mother;
             document.getElementById('category').textContent = candidate.category;
             document.getElementById('dob').textContent = candidate.dob;
             document.getElementById('gender').textContent = candidate.gender;
